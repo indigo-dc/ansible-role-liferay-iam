@@ -15,21 +15,20 @@ Defaults variable for the role are the references for the module to install and 
 repository where these are made available. These include:
 
 | **Variable**        |                   **Values**                               |
-|=====================|============================================================|
+|---------------------|------------------------------------------------------------|
 |  *modules*          | com.liferay.login.authentication.iam.web                   |
 |                     | com.liferay.portal.security.sso.iam.api                    |
 |                     | com.liferay.portal.security.sso.iam                        |
 |                     | com.liferay.portal.security.sso.iam.service                |
 |                     | com.liferay.portal.settings.authentication.iam.web         |
-|---------------------|------------------------------------------------------------|
+|                     |                                                            |
 |  *module_version*   | 1.0.0                                                      |
-|---------------------|------------------------------------------------------------|
+|                     |                                                            |
 |  *package*          | LiferayIAM-binary.tgz                                      |
-|---------------------|------------------------------------------------------------|
+|                     |                                                            |
 |  *release*          | v1.0-rc.1                                                  |
-|---------------------|------------------------------------------------------------|
+|                     |                                                            |
 |  *repository*       | https://github.com/indigo-dc/LiferayIAM/releases/download/ |
-|---------------------|------------------------------------------------------------|
 
 Two variable must be configured to execute the playbook and they are:
 
