@@ -47,7 +47,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: fmarco76.LiferayIAM, liferay_deploy_dir: /some_path/deploy, liferay_osgi_dir: /some_other_path/osgi }
+         - { role: ansible-role-liferay-iam, liferay_deploy_dir: /some_path/deploy, liferay_osgi_dir: /some_other_path/osgi }
 
 License
 -------
