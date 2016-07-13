@@ -1,0 +1,9 @@
+---
+- name: Enabling IAM modules in Liferay
+  hosts: liferay
+  become: yes
+  vars:
+    liferay_deploy_dir: /opt/liferay-ce-portal-7.0-ga2/deploy/
+    liferay_osgi_dir: /opt/liferay-ce-portal-7.0-ga2/osgi/
+  roles:
+    - ansible-role-liferay-iam
