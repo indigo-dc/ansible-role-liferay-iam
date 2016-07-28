@@ -9,8 +9,8 @@ modules:
 
 module_version: 1.0.0
 
-release: v1.0-rc.1
+release: v1.0
 
 repository: https://github.com/indigo-dc/LiferayIAM/releases/download
 
-package: LiferayIAM-binary.tgz
+package: LiferayIAM-binary-v1.0.tgz 
