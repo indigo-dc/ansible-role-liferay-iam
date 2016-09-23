@@ -1,17 +1,36 @@
 ---
 
 - name: Check modules
-  stat: path={{ liferay_osgi_dir }}/modules/{{ item }}-{{ module_version }}.jar
-  with_items: "{{ modules }}"
+  stat:
+    path: "{{ liferay_osgi_dir }}/modules/{{ item }}-{{ module_version }}.jar"
+  with_items: modules
   register: installed_modules
 
 - name: Get file modules information
   set_fact: is_installed=false
-  with_items: "{{ installed_modules.results}}"
+  with_items: installed_modules.results
   when:
     - not item | skipped
     - item.stat.exists == false
 
+
+- name: Find old modules
+  find:
+    paths: "{{ liferay_osgi_dir }}/modules"
+    patterns: "{{ item }}*.jar"
+  with_items: modules
+  register: oldmodules
+
+- name: Remove old modules
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: oldmodules.files 
+  when: is_installed | default(true) == false
+
 - name: Download modules from repository
-  unarchive: dest={{ liferay_deploy_dir }} src={{ repository }}/{{ release }}/{{ package }} copy=no
+  unarchive:
+    dest: "{{ liferay_deploy_dir }}"
+    src: "{{ repository }}/{{ release }}/{{ package }}"
+    copy: no
   when: is_installed | default(true) == false
