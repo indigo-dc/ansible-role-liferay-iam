@@ -7,10 +7,10 @@ modules:
   - com.liferay.portal.security.sso.iam.service
   - com.liferay.portal.settings.authentication.iam.web
 
-module_version: 1.2.0
+module_version: 1.2.1
 
-release: v1.2.0
+release: 1.2.1
 
 repository: https://github.com/indigo-dc/LiferayIAM/releases/download
 
-package: LiferayIAM-binary-v1.2.0.tgz 
+package: LiferayIAM-binary-1.2.1.tgz 
