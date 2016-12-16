@@ -22,11 +22,11 @@ repository where these are made available. These include:
 |                     | com.liferay.portal.security.sso.iam.service                |
 |                     | com.liferay.portal.settings.authentication.iam.web         |
 |                     |                                                            |
-|  *module_version*   | 1.0.0                                                      |
+|  *module_version*   | 1.2.1                                                      |
 |                     |                                                            |
 |  *package*          | LiferayIAM-binary.tgz                                      |
 |                     |                                                            |
-|  *release*          | v1.0-rc.1                                                  |
+|  *release*          | 1.2.1                                                      |
 |                     |                                                            |
 |  *repository*       | https://github.com/indigo-dc/LiferayIAM/releases/download/ |
 
